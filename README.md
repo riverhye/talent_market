@@ -45,6 +45,12 @@
 ![상세](https://github.com/sanppi/talent_market/assets/77149171/f1abb9da-c081-4e7b-8e93-6a396560e675)
 
 - 게시글 정보(조회수, 찜 횟수)
+  
+## 💎 리뷰
+<img src="https://github.com/sanppi/talent_market/assets/109943460/250681f7-86f5-456f-b0c5-8c1de35aa4ce" width="400">
+<img src="https://github.com/sanppi/talent_market/assets/109943460/52787f39-59e6-4df8-9fad-69657126ff86" width="400">
+
+- 구매 확정한 구매자가 상품 후기를 작성할 수 있도록 구성
 
 ## 💎 판매글 작성
 ![판매글](https://github.com/sanppi/talent_market/assets/77149171/e04d58a6-0419-41d3-8b5f-69eeb42281a8)
@@ -79,12 +85,6 @@
 ![image](https://github.com/sanppi/talent_market/assets/77149171/06f85d68-3491-491c-b8ac-f5f2c8478811)
 ![image](https://github.com/sanppi/talent_market/assets/77149171/323d1da9-2d5e-40ae-a332-8f3c64592be0)
 ![image](https://github.com/sanppi/talent_market/assets/77149171/ceb036b4-0fd4-4939-a2d3-47f9200f0783)
-
-## 💎 리뷰
-<img src="https://github.com/sanppi/talent_market/assets/109943460/250681f7-86f5-456f-b0c5-8c1de35aa4ce" width="400">
-<img src="https://github.com/sanppi/talent_market/assets/109943460/52787f39-59e6-4df8-9fad-69657126ff86" width="400">
-
-- 구매 확정한 구매자가 상품 후기를 작성할 수 있도록 구성
 
 # 시연 영상
 [시연](https://github.com/sanppi/talent_market/assets/77149171/7af7ab1f-8561-48c7-b3dd-fb864bb3ea6f)
