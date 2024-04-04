@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ProductCard } from '../Main';
 import ReviewList from '../../ReviewList';
@@ -11,6 +11,7 @@ import Pattern from '../../Pattern';
 function MyPage({ user }) {
   const { memberId, nickname, id, redCard } = user;
   const navigate = useNavigate();
+
   const myDataList = ['찜 목록', '판매 상품', '내 리뷰', '채팅 목록'];
   const endpointMapping = {
     '찜 목록': 'favorite',
@@ -59,8 +60,8 @@ function MyPage({ user }) {
   return (
     <>
       {memberId && (
-        <div className="myPage slideIn">
-          <div className="myProfileContainer">
+        <main className="myPage slideIn">
+          <section className="myProfileContainer">
             <div className="myProfileBox1">
               <div className="myProfileImg">
                 <Pattern />
@@ -77,9 +78,9 @@ function MyPage({ user }) {
                 누적 신고 <span>{redCard}</span>번
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="myList">
+          <article className="myList">
             <ul className="myListTitle">
               {myDataList.map((myData, i) => (
                 <li
@@ -94,33 +95,33 @@ function MyPage({ user }) {
                 </li>
               ))}
             </ul>
-            <div className="myListContent">
+
+            <section className="myListContent">
               <div className="pageWrapper">
-                {selectedData &&
-                  selectedData.map((data, i) => {
-                    switch (data.type) {
-                      case 'favorite':
-                      case 'selling':
-                        return (
-                          <ProductCard product={data} boardId={data.boardId} />
-                        );
-                      case 'review':
-                        return (
-                          <ReviewList
-                            reviews={selectedData.filter(
-                              (data) => data.type === 'review'
-                            )}
-                            boardId={data.boardId}
-                          />
-                        );
-                      default:
-                        return null;
-                    }
-                  })}
+                {selectedData.map((data, i) => {
+                  switch (data.type) {
+                    case 'favorite':
+                    case 'selling':
+                      return (
+                        <ProductCard product={data} boardId={data.boardId} />
+                      );
+                    case 'review':
+                      return (
+                        <ReviewList
+                          reviews={selectedData.filter(
+                            (data) => data.type === 'review'
+                          )}
+                          boardId={data.boardId}
+                        />
+                      );
+                    default:
+                      return null;
+                  }
+                })}
               </div>
-            </div>
-          </div>
-        </div>
+            </section>
+          </article>
+        </main>
       )}
       <Footer />
     </>
